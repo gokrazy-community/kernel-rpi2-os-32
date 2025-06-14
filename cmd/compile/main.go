@@ -59,9 +59,11 @@ func run() error {
 		return dockerRun("chown", "-R", user.Uid+":"+user.Gid, folder)
 	}
 
-	// bcmrpi_defconfig: default raspberry pi config according to https://www.raspberrypi.com/documentation/computers/linux_kernel.html#cross-compiling-the-kernel
+	// bcmrpi_defconfig:  default raspberry pi config for 32 bit Pi 1, Zero
+	// bcm2709_defconfig: default raspberry pi config for 32 bit Pi 2, 3, and Zero 2
+	// See: https://www.raspberrypi.com/documentation/computers/linux_kernel.html#native-build-configuration
 	// mod2noconfig: disable all modules
-	if err := dockerRun("make", "bcmrpi_defconfig", "mod2noconfig"); err != nil {
+	if err := dockerRun("make", "bcm2709_defconfig", "mod2noconfig"); err != nil {
 		return err
 	}
 
