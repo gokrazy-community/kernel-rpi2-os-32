@@ -2,7 +2,7 @@
 
 This repository holds a pre-built 32 bits Linux kernel image for the Raspberry Pi 2, compiled from https://github.com/raspberrypi/linux, for usage by the [gokrazy](https://github.com/gokrazy/gokrazy) project.
 
-> [!INFO]
+> [!NOTE]
 > For the Raspberry Pi 1 or Pi Zero, see: https://github.com/gokrazy-community/kernel-rpi-os-32
 
 To use the files in this repository (as well as the corresponding firmware), set the `KernelPackage` and `FirmwarePackage` of your gokrazy instance's `config.json`:
